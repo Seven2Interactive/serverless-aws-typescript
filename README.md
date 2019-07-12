@@ -20,8 +20,8 @@ To run a simulated Lambda webserver on your local machine, run the following com
 This will run webpack and automatially setup local routes which mirror your eventual Lambda deployment. This gives you the added benefit of seeing local console.logs in your terminal.
 
 Simply point your browser to:
-```http://localhost:3000/example/function``` 
-and you should see "success!"
+[http://localhost:3000/example/function]()
+and you should see `"success!"`
 
 ### Running Tests
 Testing is setup using Jest. Put your tests in the `__tests__` folder and they will automatically be run. Any supporting code just for tests should go in the `__tests__/modules` folder. 
