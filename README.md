@@ -11,6 +11,7 @@ Steps to get started:
     ```npm i serverless -g``` 
 
 3. Install this template as a starter with the following command
+    ```serverless install --url https://gitlab.seven2.com/seven2/serverless/aws-typescript.git --name my-project```
 
 ### Running local development server
 To run a simulated Lambda webserver on your local machine, run the following command:
