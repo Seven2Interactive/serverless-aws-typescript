@@ -1,9 +1,10 @@
 import { APIGatewayEvent, Context, ProxyResult } from "aws-lambda";
 
+
 /**
- * 
- * @param event The API gateway event
- * @param context 
+ * Default handler for this app
+ * @param event The event which comes from the APIGateway
+ * @param context The lambda context
  */
 export const handler = async (event :APIGatewayEvent, context :Context) :Promise<ProxyResult> => {
 
