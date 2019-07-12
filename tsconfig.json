@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "lib": ["es2017"],
+      "module": "commonjs",
+      "target": "es2017",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "removeComments": true,
+      "strict": true,  
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true
+    },
+    "include": [
+      "src/**/*.ts",
+      "__tests__/**/*"
+
+    ],
+    "exclude": [
+      "node_modules"
+    ]  
+  }

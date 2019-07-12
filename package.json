@@ -1,0 +1,29 @@
+{
+  "name": "sls-starter-project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "start": "serverless offline -s dev --disableCookieValidation",
+    "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline -s dev --disableCookieValidation",
+    "deploy": "serverless deploy -s internal"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^11.13.7",
+    "jest": "^24.5.0",
+    "serverless": "^1.40.0",
+    "serverless-offline": "^4.9.4",
+    "serverless-scriptable-plugin": "^1.0.2",
+    "serverless-webpack": "^5.2.0",
+    "terser-webpack-plugin": "^1.2.3",
+    "ts-jest": "^24.0.1",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.3",
+    "webpack": "^4.29.6"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.493.0"
+  }
+}

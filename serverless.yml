@@ -1,0 +1,68 @@
+# Starter with serverless-weback, serverless-offline, and Typescript
+# For a full list of allowed configuration
+# See https://serverless.com/framework/docs/providers/aws/guide/serverless.yml
+
+# The job number / name
+service: job-number-all-lowercase-replace-me
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs10.x # Runtime for all functions
+  stage: ${opt:stage,'dev'}
+  
+  # These are the tags assigned to all AWS resources created through serverless
+  # This is helpful for billing purposes
+  tags: 
+    project: ${self:service}
+
+  # Environment variables for ALL functions in this stack
+  # Accessed through process.env.SOME_VARIABLE_NAME
+  environment:
+    STAGE: ${opt:stage,'dev'}
+    EXAMPLE_VAR:  ${self:provider.custom.settings.${self:provider.stage}.exampleVar}
+  
+
+# Define each of your functions and their handlers here
+functions:
+  function-name:
+    handler: src/handlers/App.handler
+    events:
+      - http: # This creates an API Gateway HTTP endpoint which can be used to trigger this function.  Learn more in "events/apigateway"
+          path: example/function/path # Path for this endpoint
+          method: get # HTTP method for this endpoint
+
+# Define custom variables here you would like to change 
+custom:
+  settings:
+    prod:
+      # See environement: EXAMPLE_VAR above to see how to inject this into an environment variable
+      exampleVar: "This is the production environment"
+    stage:
+      exampleVar: "This is the staging environment"
+    dev:
+      exampleVar: "This is the dev environment"
+  
+  # Custom settigs for the serverless-webpack plugin
+  # see: https://github.com/serverless-heaven/serverless-webpack
+  webpack:
+    packager: 'npm'   # Packager that will be used to package your external modules
+    excludeFiles:
+      - src/**/*.test.js # Provide a glob for files to ignore
+      - src/**/*.test.ts
+      - __tests__
+    includeModules:
+      # Exclude bundling aws-sdk as it's already loaded in your lambda environments
+      forceExclude:
+        - aws-sdk
+
+# Only package the code needed for each Lambda function individually
+package:
+  individually: true
