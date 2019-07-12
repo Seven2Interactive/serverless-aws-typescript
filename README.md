@@ -26,11 +26,11 @@ Install this template either through clicking the download button on GitLab, or 
 
 Then Run
 
-```npm install```
+    npm install
 
 or, if you like yarn run
 
- ```yarn```
+    yarn
 
 ## Running local development server
 To run a simulated Lambda webserver on your local machine, run the following command:
@@ -49,9 +49,14 @@ For staging environment: ```npm run deloply stage```
 
 For production environment: ```npm run deloply prod``` 
 
+## Tearing down your functions USE WITH CAUTION
+Running the following commands will remove ALL your functions an S3 buckets deployed with serverless. This is for everyone with access to the same AWS account, not just you.
 
+    npm run remove
 
 ## Running Tests
 Testing is setup using Jest. Put your tests in the `__tests__` folder and they will automatically be run. Any supporting code just for tests should go in the `__tests__/modules` folder. 
 
-Run: ```npm test``` to run your test suite
+To run your test suite run the following command:
+
+    npm test
