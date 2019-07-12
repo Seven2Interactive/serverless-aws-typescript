@@ -27,7 +27,7 @@ provider:
   # Accessed through process.env.SOME_VARIABLE_NAME
   environment:
     STAGE: ${opt:stage,'dev'}
-    EXAMPLE_VAR:  ${self:provider.custom.settings.${self:provider.stage}.exampleVar}
+    EXAMPLE_VAR:  ${self:custom.settings.${self:provider.stage}.exampleVar}
   
 
 # Define each of your functions and their handlers here
@@ -36,7 +36,7 @@ functions:
     handler: src/handlers/App.handler
     events:
       - http: # This creates an API Gateway HTTP endpoint which can be used to trigger this function.  Learn more in "events/apigateway"
-          path: example/function/path # Path for this endpoint
+          path: example/function # Path for this endpoint
           method: get # HTTP method for this endpoint
 
 # Define custom variables here you would like to change 
