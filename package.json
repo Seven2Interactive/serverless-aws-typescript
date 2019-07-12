@@ -6,7 +6,7 @@
     "test": "jest",
     "start": "serverless offline -s dev --disableCookieValidation",
     "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline -s dev --disableCookieValidation",
-    "deploy": "serverless deploy -s internal"
+    "deploy": "serverless deploy -s"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.28",

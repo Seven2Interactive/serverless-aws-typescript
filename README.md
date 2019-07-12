@@ -42,6 +42,15 @@ Simply point your browser to:
 [http://localhost:3000/example/function]()
 and you should see `"success!"`
 
+## Deploying your functions
+For development environment: ```npm run deloply dev``` 
+
+For staging environment: ```npm run deloply stage``` 
+
+For production environment: ```npm run deloply prod``` 
+
+
+
 ## Running Tests
 Testing is setup using Jest. Put your tests in the `__tests__` folder and they will automatically be run. Any supporting code just for tests should go in the `__tests__/modules` folder. 
 
