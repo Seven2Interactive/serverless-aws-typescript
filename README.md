@@ -18,13 +18,7 @@ If you are on macOS, the easiest way is to setup the AWS CLI is to install it th
 ## Scaffolding your project using this template
 Once you've set up the serverless framework and managed your AWS credentials, you can get started by running the following command:
     
-    git clone --depth=1 https://github.com/Seven2Interactive/serverless-aws-typescript.git  my-project-name
-
-    cd my-project-name
-
-    rm -rf !$/.git
-
-    git init
+    serverless create --template-url https://github.com/Seven2Interactive/serverless-aws-typescript --path my-project-name
 
 Then Run
 
@@ -57,7 +51,7 @@ For any other environment:
 
 
 ## Tearing down your functions USE WITH CAUTION
-Running the following commands will remove ALL your functions an S3 buckets deployed with serverless. This is for everyone with access to the same AWS account, not just you.
+Running the following commands will remove ALL your functions and S3 buckets deployed with serverless. This is for everyone with access to the same AWS account, not just you.
 
     npm run remove
 
