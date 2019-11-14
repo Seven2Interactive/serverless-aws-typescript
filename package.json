@@ -4,8 +4,10 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
+    "setup": "serverless dynamodb install",
     "serve": "npm run serve:lambda",
     "serve:lambda": "serverless offline -s dev --disableCookieValidation",
+    "serve:dynamo": "serverless dynamodb start --migrate",
     "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline -s dev --disableCookieValidation",
     "deploy": "serverless deploy -s"
   },

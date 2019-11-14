@@ -27,15 +27,20 @@ Then Run
 
     cd my-project-name
     npm install
+    npm run setup
 
 or, if you like yarn run
 
     cd my-project-name
     yarn
+    yarn setup
 
 ## Running local development server
 To run a simulated Lambda HTTP webserver on your local machine, run the following command:
 ```npm run serve:lambda```
+
+If running a dynamoDB instance, also run in another terminal:
+```npm run serve:dynamo```
 
 This will run webpack and automatially setup local routes which mirror your eventual Lambda deployment. This gives you the added benefit of seeing local console.logs in your terminal. (See the [serverless-offline](https://github.com/dherault/serverless-offline) project for more detailed information)
 
