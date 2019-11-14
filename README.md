@@ -10,8 +10,11 @@ If you are on macOS, the easiest way is to setup the AWS CLI is to install it th
     
         brew install awscli
 
+2. Configure awscli with an AWS account by running
 
-2. Install the serverless framework globally:
+        awscli configure
+
+3. Install the serverless framework globally:
 
         npm i serverless -g
 
@@ -32,22 +35,22 @@ or, if you like yarn run
 
 ## Running local development server
 To run a simulated Lambda HTTP webserver on your local machine, run the following command:
-```npm run start```
+```npm run serve:lambda```
 
 This will run webpack and automatially setup local routes which mirror your eventual Lambda deployment. This gives you the added benefit of seeing local console.logs in your terminal. (See the [serverless-offline](https://github.com/dherault/serverless-offline) project for more detailed information)
 
 To test that your installation is working, point your browser to:
-[http://localhost:3000/example/function]()
+[http://localhost:3000/api/example]()
 and you should see `"success!"`
 
 ## Deploying your functions
 For development environment: 
     
-    npm run deloply dev
+    npm run deploy dev
 
 For any other environment:
 
-    npm run deloply some-environment-name
+    npm run deploy some-environment-name
 
 
 ## Tearing down your functions USE WITH CAUTION

@@ -36,7 +36,7 @@ functions:
     handler: src/handlers/App.handler
     events:
       - http: # This creates an API Gateway HTTP endpoint which can be used to trigger this function.  Learn more in "events/apigateway"
-          path: example/function # Path for this endpoint
+          path: api/example # Path for this endpoint
           method: get # HTTP method for this endpoint
 
 # Define custom variables here you would like to change 
