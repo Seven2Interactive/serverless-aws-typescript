@@ -34,6 +34,8 @@ export function mockEvent(httpMethod :HTTPMethod = HTTPMethod.GET, path: string 
 
         requestContext: {
             requestTimeEpoch: 0,
+            authorizer: {},
+            protocol: '',
             requestId: '',
             resourceId: '',
             resourcePath: path,
@@ -41,6 +43,7 @@ export function mockEvent(httpMethod :HTTPMethod = HTTPMethod.GET, path: string 
             apiId: '',
             httpMethod,
             identity: {
+                principalOrgId: null,
                 accessKey: null,
                 accountId: null,
                 apiKey: null,
